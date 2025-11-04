@@ -1,0 +1,141 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "516ed1e79623e5c2eaf9",
+  "position": {
+    "x": 964,
+    "y": 0,
+    "z": 1,
+    "height": 630,
+    "width": 316,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "autoSelectVisualType": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Population-country-1950-1999"
+                    }
+                  },
+                  "Property": "Location"
+                }
+              },
+              "queryRef": "Population-country-1950-1999.Location",
+              "nativeQueryRef": "Location"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Population-country-1950-1999"
+                        }
+                      },
+                      "Property": "AgeGrpSpan"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Population-country-1950-1999.AgeGrpSpan)",
+              "nativeQueryRef": "Sum of AgeGrpSpan"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Population-country-1950-1999"
+                        }
+                      },
+                      "Property": "AgeGrpStart"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Population-country-1950-1999.AgeGrpStart)",
+              "nativeQueryRef": "Sum of AgeGrpStart"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "22346b7bac7b3d5be201",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Population-country-1950-1999"
+                  }
+                },
+                "Property": "AgeGrpSpan"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "090d6af2a5437172467c",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Population-country-1950-1999"
+                  }
+                },
+                "Property": "AgeGrpStart"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "19988c20256698617844",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Population-country-1950-1999"
+              }
+            },
+            "Property": "Location"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
