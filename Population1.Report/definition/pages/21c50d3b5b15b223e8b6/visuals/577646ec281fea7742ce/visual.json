@@ -53,6 +53,44 @@
               },
               "queryRef": "Sum(Population-country-1950-1999.PopMale)",
               "nativeQueryRef": "Sum of PopMale"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Population-country-1950-1999"
+                        }
+                      },
+                      "Property": "Time"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Population-country-1950-1999.Time)",
+              "nativeQueryRef": "Sum of Time"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Population-country-1950-1999"
+                        }
+                      },
+                      "Property": "PopTotal"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Population-country-1950-1999.PopTotal)",
+              "nativeQueryRef": "Sum of PopTotal"
             }
           ]
         }
@@ -115,6 +153,44 @@
                   }
                 },
                 "Property": "PopMale"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5c1752201928628e35d8",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Population-country-1950-1999"
+                  }
+                },
+                "Property": "Time"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "44a8212a3ef013c68b0d",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Population-country-1950-1999"
+                  }
+                },
+                "Property": "PopTotal"
               }
             },
             "Function": 0
